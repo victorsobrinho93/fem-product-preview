@@ -40,5 +40,12 @@
         <a href="#" class="cart-btn"><img src="images/icon-cart.svg">Add to Cart</a>
       </div>
     </main>
+    <script>
+      const portrait = window.matchMedia("(max-width: 960px), (orientation: portrait)");
+      if (portrait.matches) {
+        const productImage = document.getElementById("product-image");
+        productImage.src = "images/image-product-mobile.jpg";
+      }
+    </script>
   </body>
 </html>
