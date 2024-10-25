@@ -70,6 +70,10 @@ h1,
   background-color: white;
 }
 
+img {
+  object-fit: cover;
+}
+
 #product-info {
   background-color: white;
   width: 100%;
