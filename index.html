@@ -41,11 +41,17 @@
       </div>
     </main>
     <script>
-      const portrait = window.matchMedia("(max-width: 960px), (orientation: portrait)");
-      if (portrait.matches) {
+      window.addEventListener("resize", () => {
+        const portrait = window.matchMedia("(max-width: 960px), (orientation: portrait)");
         const productImage = document.getElementById("product-image");
-        productImage.src = "images/image-product-mobile.jpg";
-      }
+        if (portrait.matches) {
+          productImage.src = "images/image-product-mobile.jpg";
+        } else {
+          productImage.src = "images/image-product-desktop.jpg";
+        }
+      })
+
+
     </script>
   </body>
 </html>
